@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">jokeProviderAndroid</string>
+    <string name="joke_extra_displayer">joke_extra_displayer</string>
+    <string name="no_joke_available">No Joke Available</string>
 </resources>
