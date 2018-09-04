@@ -1,9 +1,9 @@
 package com.example.android.jokeproviderjava;
 
 public class Provider {
-    private final String joke = "haha knock knock joke~~~";
+    private static final String joke = "haha knock knock joke~~~";
 
-    public String getJoke() {
+    public static String getJoke() {
         return joke;
     }
 }

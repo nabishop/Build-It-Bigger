@@ -12,7 +12,7 @@ import com.example.android.jokeproviderandroid.JokeDisplayerActivity;
 import com.example.android.jokeproviderjava.Provider;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements EndpointsAsyncTask.JokeCaller {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,12 +44,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        Provider provider = new Provider();
-        String joke = provider.getJoke();
-        Intent intent = new Intent(this, JokeDisplayerActivity.class);
-        intent.putExtra(getString(R.string.joke_extra_displayer), joke);
-        startActivity(intent);
+        EndpointsAsyncTask endpointsAsyncTask = new EndpointsAsyncTask(this);
+        endpointsAsyncTask.execute();
     }
 
 
+    @Override
+    public void jokeReady(String joke) {
+        if (joke == null || joke.isEmpty()) {
+            Toast.makeText(this, R.string.joke_retrieving_error, Toast.LENGTH_LONG).show();
+        } else {
+            Intent intent = new Intent(this, JokeDisplayerActivity.class);
+            intent.putExtra(getString(R.string.joke_extra_displayer), joke);
+            startActivity(intent);
+        }
+    }
 }
