@@ -1,47 +1,24 @@
-Sep 03, 2018 4:55:59 PM com.google.appengine.tools.util.Logging initializeLogging
-INFO: Failed to read the default logging configuration
-java.io.FileNotFoundException: C:\Users\Nick\AppData\Local\Google\Cloud SDK\google-cloud-sdk\platform\google_appengine\google\appengine\tools\java\config\sdk\logging.properties (The system cannot find the path specified)
-	at java.io.FileInputStream.open0(Native Method)
-	at java.io.FileInputStream.open(FileInputStream.java:195)
-	at java.io.FileInputStream.<init>(FileInputStream.java:138)
-	at java.io.FileInputStream.<init>(FileInputStream.java:93)
-	at java.util.logging.LogManager.readConfiguration(LogManager.java:1301)
-	at com.google.appengine.tools.util.Logging.initializeLogging(Logging.java:38)
-	at com.google.appengine.tools.development.SharedMain.sharedInit(SharedMain.java:164)
-	at com.google.appengine.tools.development.DevAppServerMain.main(DevAppServerMain.java:237)
-
 Warning: Google App Engine Java 7 runtime is deprecated.
 Warning: See https://cloud.google.com/appengine/docs/deprecations/java7
-Sep 03, 2018 4:55:59 PM com.google.appengine.tools.development.LoggingConfigurationManager loadPropertiesFile
-WARNING: Unable to load properties file, C:\Users\Nick\AppData\Local\Google\Cloud SDK\google-cloud-sdk\platform\google_appengine\google\appengine\tools\java\config\sdk\logging.properties
-java.io.FileNotFoundException: C:\Users\Nick\AppData\Local\Google\Cloud SDK\google-cloud-sdk\platform\google_appengine\google\appengine\tools\java\config\sdk\logging.properties (The system cannot find the path specified)
-	at java.io.FileInputStream.open0(Native Method)
-	at java.io.FileInputStream.open(FileInputStream.java:195)
-	at java.io.FileInputStream.<init>(FileInputStream.java:138)
-	at com.google.appengine.tools.development.LoggingConfigurationManager.loadPropertiesFile(LoggingConfigurationManager.java:170)
-	at com.google.appengine.tools.development.LoggingConfigurationManager.read(LoggingConfigurationManager.java:84)
-	at com.google.appengine.tools.development.ApplicationConfigurationManager.validateAndRegisterGlobalValues(ApplicationConfigurationManager.java:183)
-	at com.google.appengine.tools.development.ApplicationConfigurationManager.access$400(ApplicationConfigurationManager.java:31)
-	at com.google.appengine.tools.development.ApplicationConfigurationManager$WarModuleConfigurationHandle.readConfiguration(ApplicationConfigurationManager.java:443)
-	at com.google.appengine.tools.development.ApplicationConfigurationManager.<init>(ApplicationConfigurationManager.java:158)
-	at com.google.appengine.tools.development.ApplicationConfigurationManager.newWarConfigurationManager(ApplicationConfigurationManager.java:100)
-	at com.google.appengine.tools.development.ApplicationConfigurationManager.newWarConfigurationManager(ApplicationConfigurationManager.java:86)
-	at com.google.appengine.tools.development.DevAppServerImpl.<init>(DevAppServerImpl.java:146)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.google.appengine.tools.development.DevAppServerFactory.doCreateDevAppServer(DevAppServerFactory.java:386)
-	at com.google.appengine.tools.development.DevAppServerFactory.access$000(DevAppServerFactory.java:31)
-	at com.google.appengine.tools.development.DevAppServerFactory$1.run(DevAppServerFactory.java:318)
-	at com.google.appengine.tools.development.DevAppServerFactory$1.run(DevAppServerFactory.java:315)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at com.google.appengine.tools.development.DevAppServerFactory.createDevAppServer(DevAppServerFactory.java:314)
-	at com.google.appengine.tools.development.DevAppServerMain$StartAction.apply(DevAppServerMain.java:374)
-	at com.google.appengine.tools.util.Parser$ParseResult.applyArgs(Parser.java:45)
-	at com.google.appengine.tools.development.DevAppServerMain.run(DevAppServerMain.java:247)
-	at com.google.appengine.tools.development.DevAppServerMain.main(DevAppServerMain.java:238)
-
-Sep 03, 2018 4:55:59 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
+Sep 05, 2018 5:47:45 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
 INFO: Overwriting system property key 'java.util.logging.config.file', value 'C:\Users\Nick\AppData\Local\Google\Cloud SDK\google-cloud-sdk\platform\google_appengine\google\appengine\tools\java\config\sdk\logging.properties' with value 'WEB-INF/logging.properties' from 'C:\Users\Nick\Documents\GitHub\Build-It-Bigger\backend\build\exploded-backend\WEB-INF\appengine-web.xml'
+Sep 05, 2018 5:47:45 PM com.google.apphosting.utils.jetty.JettyLogger info
+INFO: Logging to JettyLogger(null) via com.google.apphosting.utils.jetty.JettyLogger
+Sep 06, 2018 12:47:45 AM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
+WARNING: Your working directory, (C:\Users\Nick\Documents\GitHub\Build-It-Bigger\backend) is not equal to your 
+web application root (C:\Users\Nick\Documents\GitHub\Build-It-Bigger\backend\build\exploded-backend)
+You will not be able to access files from your working directory on the production server.
+
+Sep 06, 2018 12:47:45 AM com.google.apphosting.utils.jetty.JettyLogger info
+INFO: jetty-6.1.x
+Sep 06, 2018 12:47:46 AM com.google.apphosting.utils.jetty.JettyLogger info
+INFO: Started SelectChannelConnector@localhost:8080
+Sep 06, 2018 12:47:46 AM com.google.appengine.tools.development.AbstractModule startup
+INFO: Module instance default is running at http://localhost:8080/
+Sep 06, 2018 12:47:46 AM com.google.appengine.tools.development.AbstractModule startup
+INFO: The admin console is running at http://localhost:8080/_ah/admin
+Sep 05, 2018 5:47:46 PM com.google.appengine.tools.development.DevAppServerImpl doStart
+INFO: Dev App Server is now running
+Sep 05, 2018 5:49:30 PM com.google.appengine.tools.development.AbstractModule shutdown
 Shutting down.
+INFO: Shutting down module instance default
