@@ -1,4 +1,4 @@
-package com.example.android.jokeproviderandroid;
+package com.udacity.gradle.builditbigger;
 
 import org.junit.Test;
 

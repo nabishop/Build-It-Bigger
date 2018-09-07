@@ -1,4 +1,4 @@
-package com.example.android.jokeproviderandroid;
+package com.udacity.gradle.builditbigger;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.android.jokeproviderandroid.test", appContext.getPackageName());
+        assertEquals("com.udacity.gradle.builditbigger.test", appContext.getPackageName());
     }
 }

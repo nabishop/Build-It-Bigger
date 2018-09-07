@@ -1,4 +1,4 @@
-package mainAppTests;
+package com.udacity.gradle.builditbigger;
 
 import com.udacity.gradle.builditbigger.EndpointsAsyncTask;
 
