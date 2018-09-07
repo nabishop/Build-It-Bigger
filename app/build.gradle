@@ -40,7 +40,7 @@ android {
         }
         paid {
             dimension "version"
-            applicationId "com.udacity.gradle.builditbigger.free"
+            applicationId "com.udacity.gradle.builditbigger.paid"
         }
     }
 
