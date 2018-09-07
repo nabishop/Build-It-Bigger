@@ -1,7 +1,5 @@
 package com.udacity.gradle.builditbigger;
 
-import com.udacity.gradle.builditbigger.EndpointsAsyncTask;
-
 import org.junit.Assert;
 
 import org.junit.Test;
@@ -14,18 +12,18 @@ import java.util.concurrent.CountDownLatch;
 public class JokeRetrieveTest {
     @Test
     public void testJokeLoading() {
-        final CountDownLatch countDownLatch = new CountDownLatch(1);
+        final CountDownLatch signal = new CountDownLatch(1);
         new EndpointsAsyncTask(new EndpointsAsyncTask.JokeCaller() {
             @Override
             public void jokeReady(String joke) {
                 if (joke == null || joke.isEmpty()) {
                     Assert.fail();
                 }
-                countDownLatch.countDown();
+                signal.countDown();
             }
         }).execute();
         try {
-            countDownLatch.await();
+            signal.await();
         } catch (InterruptedException e) {
             Assert.fail();
             e.printStackTrace();
