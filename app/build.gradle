@@ -36,13 +36,11 @@ android {
     productFlavors {
         free {
             dimension "version"
-            applicationIdSuffix ".free"
-            versionNameSuffix "-free"
+            applicationId "com.udacity.gradle.builditbigger.free"
         }
         paid {
             dimension "version"
-            applicationIdSuffix ".paid"
-            versionNameSuffix "-paid"
+            applicationId "com.udacity.gradle.builditbigger.free"
         }
     }
 
