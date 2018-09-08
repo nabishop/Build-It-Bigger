@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.android.jokeproviderandroid.JokeDisplayerActivity;
-import com.example.android.jokeproviderjava.Provider;
 
 
 public class MainActivity extends AppCompatActivity implements EndpointsAsyncTask.JokeCaller {
